@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 
 @RestController
 @RequestMapping
-
 public class CalculadoraCientifica {
     private final InterfaceCalcuCientifica calcularCient;
     private final CalculadoraConfig config;
@@ -26,6 +25,5 @@ public class CalculadoraCientifica {
     @GetMapping("/factorial/{numero}")
     public ResponseEntity  getfactorial(@PathVariable String numero) {
         return calcularCient.factorial(numero);
-
     }
 }
