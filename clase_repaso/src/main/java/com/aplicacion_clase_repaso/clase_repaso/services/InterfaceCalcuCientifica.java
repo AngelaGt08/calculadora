@@ -4,13 +4,14 @@ import org.springframework.http.ResponseEntity;
 
 public interface InterfaceCalcuCientifica {
 
-    ResponseEntity factorial (String numero);
 
-    ResponseEntity multiplos (String numero);
+    ResponseEntity getFactorial(String numero);
 
-    ResponseEntity coseno (String numero);
+    ResponseEntity getMultiplos(String numero);
 
-    ResponseEntity raizCuadrada (String numero);
+    ResponseEntity getCoseno(String numero);
 
-    ResponseEntity radio (String numero);
+    ResponseEntity getRaizCuadrada(String numero);
+
+    ResponseEntity getRadio(String radio);
 }

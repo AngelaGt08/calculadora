@@ -8,24 +8,49 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.stereotype.Service;
+
+import javax.websocket.server.PathParam;
+
 @Service
 
 @RestController
 @RequestMapping
 
 public class CalculadoraCientifica {
-    private final InterfaceCalcuCientifica calcularCient;
-    private final CalculadoraConfig config;
+    private final InterfaceCalcuCientifica interfaceCalcuCientifica;
 
-
-    public CalculadoraCientifica(CalculadoraConfig config, InterfaceCalcuCientifica calcularCient){
-        this.config = config;
-        this.calcularCient = calcularCient;
+    public CalculadoraCientifica(CalculadoraConfig config, InterfaceCalcuCientifica interfaceCalcuCientifica){
+                this.interfaceCalcuCientifica = interfaceCalcuCientifica;
     }
 
     @GetMapping("/factorial/{numero}")
-    public ResponseEntity  getfactorial(@PathVariable String numero) {
-        return calcularCient.factorial(numero);
-
+    public ResponseEntity getFactorial(@PathVariable String numero){
+        return interfaceCalcuCientifica.getFactorial(numero);
     }
+
+    @GetMapping("/multiplos/{numero}")
+    public ResponseEntity getMultiplos(@PathVariable String numero){
+        return interfaceCalcuCientifica.getMultiplos(numero);
+    }
+
+    @GetMapping("/coseno/{numero}")
+    public ResponseEntity getCoseno(@PathVariable String numero){
+        return interfaceCalcuCientifica.getCoseno(numero);
+    }
+
+    @GetMapping("/raiz/{numero}")
+    public ResponseEntity getRaizCuadrada(@PathVariable String numero){
+        return interfaceCalcuCientifica.getRaizCuadrada(numero);
+    }
+
+    @GetMapping("/radio/{numero}")
+    public ResponseEntity getRadio(@PathVariable String numero){
+        return interfaceCalcuCientifica.getRadio(numero);
+    }
+
+
+
+
+
+
 }

@@ -45,7 +45,7 @@ public class CalculadoraBasica {
         int num2 = Integer.parseInt(numero2);
         int resultado = num1 - num2;
 
-        return ResponseEntity.ok(config.getOperacion() + " " + resultado);
+        return ResponseEntity.ok(config.getReste() + " " + resultado);
     }
 
     @GetMapping("/multiplicacion/{numero1}/{numero2}")
