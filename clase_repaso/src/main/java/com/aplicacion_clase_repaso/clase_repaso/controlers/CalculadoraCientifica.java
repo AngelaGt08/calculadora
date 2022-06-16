@@ -15,7 +15,6 @@ import javax.websocket.server.PathParam;
 
 @RestController
 @RequestMapping
-
 public class CalculadoraCientifica {
     private final InterfaceCalcuCientifica interfaceCalcuCientifica;
 
@@ -24,6 +23,7 @@ public class CalculadoraCientifica {
     }
 
     @GetMapping("/factorial/{numero}")
+<<<<<<< HEAD
     public ResponseEntity getFactorial(@PathVariable String numero){
         return interfaceCalcuCientifica.getFactorial(numero);
     }
@@ -54,3 +54,9 @@ public class CalculadoraCientifica {
 
 
 }
+=======
+    public ResponseEntity  getfactorial(@PathVariable String numero) {
+        return calcularCient.factorial(numero);
+    }
+}
+>>>>>>> 7faa03b4adf889a571d4e7c37c997d36f0960e92

@@ -2,7 +2,10 @@ package com.aplicacion_clase_repaso.clase_repaso.services.implementacion;
 
 import com.aplicacion_clase_repaso.clase_repaso.config.CalculadoraConfig;
 import com.aplicacion_clase_repaso.clase_repaso.services.InterfaceCalcuCientifica;
+<<<<<<< HEAD
 import org.springframework.beans.factory.annotation.Value;
+=======
+>>>>>>> 7faa03b4adf889a571d4e7c37c997d36f0960e92
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -11,9 +14,42 @@ public class ImplementCalcCientifica implements InterfaceCalcuCientifica {
 
     CalculadoraConfig calculadoraConfig;
 
+<<<<<<< HEAD
     @Override
     public ResponseEntity getFactorial(String numero){
         String advertencia = "";
+=======
+    public ImplementCalcCientifica(CalculadoraConfig calculadoraConfig) {
+        this.calculadoraConfig = calculadoraConfig;
+    }
+
+    @Override
+    public ResponseEntity factorial(String numero) {
+        return null;
+    }
+
+    @Override
+    public ResponseEntity multiplos(String numero) {
+        return null;
+    }
+
+    @Override
+    public ResponseEntity coseno(String numero) {
+        return null;
+    }
+
+    @Override
+    public ResponseEntity raizCuadrada(String numero) {
+        return null;
+    }
+
+    @Override
+    public ResponseEntity radio(String numero) {
+        return null;
+    }
+/*
+    public ResponseEntity factorial (String numero){
+>>>>>>> 7faa03b4adf889a571d4e7c37c997d36f0960e92
 
         if(ImplementValidarDatos.siNumero(numero)){
             int num1 = Integer.parseInt(numero);
@@ -21,6 +57,7 @@ public class ImplementCalcCientifica implements InterfaceCalcuCientifica {
             for(int i=num1; i >= 2; i--){
                 resultado *= i;
             }
+<<<<<<< HEAD
             advertencia = numero + ": "+ resultado;
         }else {
             advertencia = "El Valor ingresado no es un número";
@@ -95,3 +132,10 @@ public class ImplementCalcCientifica implements InterfaceCalcuCientifica {
 
 
 
+=======
+            resultado= facto * i;
+          }
+        return ResponseEntity.ok(resultado);
+    }*/
+}
+>>>>>>> 7faa03b4adf889a571d4e7c37c997d36f0960e92
