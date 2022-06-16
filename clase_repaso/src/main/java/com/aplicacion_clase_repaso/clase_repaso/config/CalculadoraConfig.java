@@ -4,16 +4,16 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(prefix = "calculadora")
+@ConfigurationProperties(prefix = "calculadora.opcion")
 
 
 public class CalculadoraConfig {
-    private String operacion;
-    public String getOperacion(){
-        return operacion;
+    private String reste;
+    public String getReste(){
+        return reste;
     }
-    public void setOperacion(String operacion) {
-        this.operacion = operacion;
+    public void setReste(String reste) {
+        this.reste = reste;
     }
 
     private String multiplique;
@@ -39,12 +39,36 @@ public class CalculadoraConfig {
         this.factor = factor;
     }
 
-    private String multiplo;
-    public String getMultiplo() {
-        return multiplo;
+    private String multiplos;
+    public String getMultiplos() {
+        return multiplos;
     }
-    public void setMultiplo(String multiplo) {
-        this.multiplo = multiplo;
+    public void setMultiplos(String multiplos) {
+        this.multiplos = multiplos;
+    }
+
+    private String coseno;
+    public String getCoseno() {
+        return coseno;
+    }
+    public void setCoseno(String coseno) {
+        this.coseno = coseno;
+    }
+
+    private String raiz;
+    public String getRaiz() {
+        return raiz;
+    }
+    public void setRaiz(String raiz) {
+        this.raiz = raiz;
+    }
+
+    private String radio;
+    public String getRadio() {
+        return radio;
+    }
+    public void setRadio(String radio) {
+        this.radio = radio;
     }
 
 
