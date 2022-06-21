@@ -5,6 +5,8 @@ import com.aplicacion_clase_repaso.clase_repaso.services.InterfaceCalcuBasica;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 @Service
+
+
 public class implementCalcBasica implements InterfaceCalcuBasica {
 
    CalculadoraConfig calculadoraConfig;
