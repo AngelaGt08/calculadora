@@ -71,6 +71,31 @@ public class CalculadoraConfig {
         this.radio = radio;
     }
 
+    private String manana;
+    public String getManana() {
+        return manana;
+    }
+    public void setManana(String manana) {
+        this.manana = manana;
+    }
+
+    private String tarde;
+    public String getTarde() {
+        return tarde;
+    }
+    public void setTarde(String tarde) {
+        this.tarde = tarde;
+    }
+
+    private String noche;
+    public String getNoche() {
+        return noche;
+    }
+    public void setNoche(String noche) {
+        this.noche = noche;
+    }
+
+
 
 }
 

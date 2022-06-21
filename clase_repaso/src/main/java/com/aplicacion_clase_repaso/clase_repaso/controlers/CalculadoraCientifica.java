@@ -2,6 +2,7 @@ package com.aplicacion_clase_repaso.clase_repaso.controlers;
 
 import com.aplicacion_clase_repaso.clase_repaso.config.CalculadoraConfig;
 import com.aplicacion_clase_repaso.clase_repaso.services.InterfaceCalcuCientifica;
+import com.aplicacion_clase_repaso.clase_repaso.services.InterfaceSaludo;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,10 +19,12 @@ public class CalculadoraCientifica {
     private final InterfaceCalcuCientifica interfaceCalcuCientifica;
     private final CalculadoraConfig calculadoraConfig;
 
-    public CalculadoraCientifica(CalculadoraConfig config, InterfaceCalcuCientifica interfaceCalcuCientifica, CalculadoraConfig calculadoraConfig){
-                this.interfaceCalcuCientifica = interfaceCalcuCientifica;
+    public CalculadoraCientifica(InterfaceCalcuCientifica interfaceCalcuCientifica, CalculadoraConfig calculadoraConfig){
+        this.interfaceCalcuCientifica = interfaceCalcuCientifica;
         this.calculadoraConfig = calculadoraConfig;
+
     }
+    String mensajeSaludo ="";
 
     @GetMapping("/factorial/{numero}")
     public ResponseEntity getFactorial(@PathVariable String numero){

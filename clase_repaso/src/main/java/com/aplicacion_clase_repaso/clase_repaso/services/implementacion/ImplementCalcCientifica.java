@@ -10,8 +10,10 @@ import org.springframework.stereotype.Service;
 public class ImplementCalcCientifica implements InterfaceCalcuCientifica {
 
     CalculadoraConfig calculadoraConfig;
-    public ImplementCalcCientifica (CalculadoraConfig calculadoraConfig){
+    ImplementSaludo implementSaludo;
+    public ImplementCalcCientifica (CalculadoraConfig calculadoraConfig, ImplementSaludo implementSaludo){
         this.calculadoraConfig = calculadoraConfig;
+        this.implementSaludo = implementSaludo;
     }
 
     @Override
@@ -28,7 +30,7 @@ public class ImplementCalcCientifica implements InterfaceCalcuCientifica {
         }else {
             advertencia = "El Valor ingresado no es un número";
         }
-        return ResponseEntity.ok(calculadoraConfig.getFactor() +" " + advertencia);
+        return ResponseEntity.ok(implementSaludo.getSaludo() +"\n" +calculadoraConfig.getFactor() +" " + advertencia);
     }
 
     @Value("${calculadora.opcion.numero}")
@@ -45,7 +47,7 @@ public class ImplementCalcCientifica implements InterfaceCalcuCientifica {
         }else{
             advertencia = "El Valor ingresado no es un número";
         }
-        return ResponseEntity.ok(calculadoraConfig.getMultiplos()+ "\n" + advertencia);
+        return ResponseEntity.ok(implementSaludo.getSaludo() +"\n" +calculadoraConfig.getMultiplos()+ "\n" + advertencia);
     }
 
     @Override
@@ -58,7 +60,7 @@ public class ImplementCalcCientifica implements InterfaceCalcuCientifica {
         }else{
             advertencia = "El Valor ingresado no es un número";
         }
-        return ResponseEntity.ok(calculadoraConfig.getCoseno()+ advertencia);
+        return ResponseEntity.ok(implementSaludo.getSaludo() +"\n" +calculadoraConfig.getCoseno()+ advertencia);
     }
 
     @Override
@@ -74,7 +76,7 @@ public class ImplementCalcCientifica implements InterfaceCalcuCientifica {
         }else {
             advertencia = "El Valor ingresado no es un número";
         }
-        return ResponseEntity.ok(calculadoraConfig.getRaiz() + advertencia);
+        return ResponseEntity.ok(implementSaludo.getSaludo() +"\n" +calculadoraConfig.getRaiz() + advertencia);
     }
     @Override
     public ResponseEntity getRadio(String radio){
@@ -89,7 +91,7 @@ public class ImplementCalcCientifica implements InterfaceCalcuCientifica {
         }else {
             advertencia = "El Valor ingresado no es un número";
         }
-        return ResponseEntity.ok(calculadoraConfig.getRadio() + advertencia);
+        return ResponseEntity.ok(implementSaludo.getSaludo() +"\n" +calculadoraConfig.getRadio() + advertencia);
     }
 
 
